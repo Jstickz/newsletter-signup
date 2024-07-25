@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Variable declaration */
+:root {
+  /* Colors */
+  --tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  font-family: "Roboto", sans-serif;
+  background: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-container {
+  width: 100%;
+  flex: 0 0 38%;
+  background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+.bottom-container {
+  width: 100%;
+  flex: 0 0 62%;
+  /* background-color: aqua; */
+  padding: 2em 1.8em;
+}
+
+.bottom-container h1 {
+  font-size: 2.4em;
+  font-weight: 900;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 1rem;
+}
+
+.bottom-container p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: var(--Charcoal-Grey);
+}
+
+.bottom-container ul {
+  margin-bottom: 2rem;
+}
+
+.bottom-container ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  margin-left: 1.8rem;
+  position: relative;
+  color: var(--Charcoal-Grey);
+}
+
+.bottom-container ul li::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  /* background-color: red; */
+  left: -28px;
+  top: 2px;
+  border-radius: 50%;
+  background-image: url(/assets/images/icon-list.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.error-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-label label {
+  font-size: 16px;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 700;
+}
+
+.error-label span {
+  color: var(--tomato);
+  font-weight: 700;
+}
+
+form input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--Grey);
+  padding: 1em 1.5em;
+  margin: 0.5rem 0 1em;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  /* cursor: pointer; */
+}
+
+form input:focus {
+  border: 1px solid var(--Dark-Slate-Grey);
+}
+
+form input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--Grey);
+  font-weight: 400;
+}
+
+.button {
+  width: 100%;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--White);
+  border: none;
+  background-color: var(--Dark-Slate-Grey);
+  text-wrap: nowrap;
+  position: relative;
+}
+
+.button:hover {
+  background: linear-gradient(to right, var(--tomato), rgb(249, 45, 4));
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+@media (width >= 700px) {
+  body {
+    background-color: var(--Dark-Slate-Grey);
+  }
+  .container {
+    width: 650px;
+    height: 450px;
+    flex-direction: row-reverse;
+    background: var(--White);
+    border-radius: 1.5em;
+    padding: 1rem;
+  }
+  .top-container {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 40%;
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+    border-radius: 1rem;
+  }
+
+  .bottom-container {
+    flex: 0 0 60%;
+  }
+
+  .container .bottom-container h1 {
+    margin-top: 1rem;
+  }
+
+  .container .bottom-container p {
+    font-size: 14px;
+  }
+
+  .container .bottom-container li {
+    font-size: 14px;
+  }
+
+  .container .bottom-container input {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .container .bottom-container button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* @media (width >= 1100px) {
+    .container {
+        width: 50%;
+    }
+} */

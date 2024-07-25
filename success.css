@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Variable declaration */
+:root {
+  /* Colors */
+  --tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  font-family: "Roboto", sans-serif;
+  background: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.upper-box {
+  height: 60%;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.upper-box img {
+  margin-bottom: 2rem;
+  transform: rotate(360deg);
+  transition: 1s ease;
+}
+
+.upper-box h1 {
+  font-size: 2.83rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 0.5rem;
+}
+
+.upper-box p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--Charcoal-Grey);
+  line-height: 1.6rem;
+}
+
+.upper-box p span {
+  color: var(--Dark-Slate-Grey);
+  font-weight: 900;
+}
+
+.lower-box {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* background-color: brown; */
+}
+
+.lower-box .button {
+  width: 100%;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--White);
+  border: none;
+  background-color: var(--Dark-Slate-Grey);
+  text-wrap: nowrap;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: linear-gradient(to right, var(--tomato), rgb(249, 45, 4));
+}
+
+@media (width >= 600px) {
+  body {
+    background: var(--Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 320px;
+    height: 330px;
+    background-color: var(--White);
+    border-radius: 1.5rem;
+    padding: 0rem 2rem;
+  }
+
+  .upper-box img {
+    width: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .upper-box h1 {
+    font-size: 2.3rem;
+    margin-bottom: -1px;
+    line-height: 2.3rem;
+  }
+
+  .upper-box p {
+    font-size: 12px;
+    line-height: 1rem;
+  }
+
+  .lower-box {
+    height: 20%;
+    margin-bottom: -20px;
+  }
+
+  .lower-box a {
+    padding: 0.8rem;
+  }
+
+  .button:hover {
+    box-shadow: 0px 10px 13px  hsla(4, 100%, 67%, 0.285);
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Newsletter sign-up success page
+    </title>
+
+    <!-- Linking the index.html stylessheet -->
+    <link rel="stylesheet" href="success.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <div class="upper-box">
+        <img src="./assets/images/icon-success.svg" alt="success-icon" />
+        <h1>Thanks for subscribing!</h1>
+        <br />
+        <p>
+          A confirmation email has been sent to
+          <span id="confirmationMail"></span>. Please open it and click the
+          button inside to confirm your subcription.
+        </p>
+      </div>
+      <div class="lower-box">
+        <a href="./index.html" class="button" id="dismissMessage"
+          >Dismiss message</a
+        >
+      </div>
+    </main>
+
+    <script defer src="./success.js"></script>
+  </body>
+</html>
